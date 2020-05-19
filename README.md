@@ -21,9 +21,10 @@ $ pip3 install virtualenv
 
 # create a test project
 
-## make sure that you are in the docker!
+make sure that you are in the docker!
 
-## make a new user and switch to it. Ceate project direct and setup virtualenv.
+make a new user and switch to it. Ceate project direct and setup virtualenv.
+
 ```bash
 $ adduser <username>
 $ su <username>
@@ -43,7 +44,7 @@ $ pip install jupyterlab
 $ jupyter lab --ip 0.0.0.0 --port 8080 --no-browser --allow-root
 ```
 
-## you can now open jupyter in a browser via the prompted url
+you can now open jupyter in a browser via the prompted url
 
 ### clone git repo
 
@@ -64,6 +65,7 @@ $ cat ~/.ssh/id_rsa.pub
 ## connect to git
 ```bash
 $ eval "$(ssh-agent -s)"
+$ ssh-add ~/.ssh/id_rsa
 $ git clone <repo url>
 ```
 
