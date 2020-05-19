@@ -1,16 +1,16 @@
-# main setup #
+# 1. main setup
 
-## get the latest ubuntu docker confs
+### 1.1 get the latest ubuntu docker confs
 ```bash
 $ docker pull ubuntu
 ```
 
-## run image
+### 1.2 run image
 ```bash
 $ docker run -it --name <imagename> -p 8080:8080 ubuntu
 ```
 
-## setup environment
+### 1.3 setup environment
 ```bash
 $ apt-get update
 $ apt-get install nano
@@ -19,11 +19,11 @@ $ pip3 install --upgrade pip
 $ pip3 install virtualenv
 ```
 
-# create a test project
+# 2. create a test project
 
-make sure that you are in the docker!
+Make sure that you are in the docker!
 
-make a new user and switch to it. Ceate project direct and setup virtualenv.
+Create a new user and switch to it. Create project direct and setup virtualenv.
 
 ```bash
 $ adduser <username>
@@ -38,17 +38,17 @@ $ pip install jupyter
 $ pip install jupyterlab
 ```
 
+start up local jupyter server
 
-## start up local jupyter server
 ```bash
 $ jupyter lab --ip 0.0.0.0 --port 8080 --no-browser --allow-root
 ```
 
 you can now open jupyter in a browser via the prompted url
 
-### clone git repo
+### 3. clone git repo
 
-## install and configure git
+## 3.1 install and configure git
 ```bash
 $ apt install git
 $ su <username>
@@ -57,19 +57,19 @@ $ git config --global user.email "<your_git_email>"
 $ ssh-keygen -t rsa -b 4096 -C "<your_git_email>"
 ```
 
-## copy the output of the following commend and add ssh key in your github account
+## 3.2 copy the output of the following commend and add ssh key in your github account
 ```bash
 $ cat ~/.ssh/id_rsa.pub
 ```
 
-## connect to git
+## 3.3 connect to git
 ```bash
 $ eval "$(ssh-agent -s)"
 $ ssh-add ~/.ssh/id_rsa
 $ git clone <repo url>
 ```
 
-# stop, restart and execute image
+# 4. stop, restart and execute image
 ```bash
 $ docker start <imagename>
 $ docker exec -it <imagename> bash
