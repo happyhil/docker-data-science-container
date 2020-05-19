@@ -1,6 +1,6 @@
 # Step-by-step deployment of you own data science docker!
 
-## 1. main setup
+## 1. Building the Ubuntu Docker
 
 Get the latest ubuntu docker confs.
 
@@ -23,7 +23,7 @@ $ pip3 install --upgrade pip
 $ pip3 install virtualenv
 ```
 
-## 2. create a test project
+## 2. Create a Test Project to Launch a Jupyter Server
 
 Make sure that you are still in the docker!
 
@@ -55,7 +55,7 @@ $ jupyter lab --ip 0.0.0.0 --port 8080 --no-browser --allow-root
 
 You can now open jupyter in a browser via the prompted url.
 
-## 3. clone git repo
+## 3. Clone a Github Repository
 
 Install and configure git.
 
@@ -80,7 +80,7 @@ $ ssh-add ~/.ssh/id_rsa
 $ git clone <repo url>
 ```
 
-## 4. stop, restart and execute image
+## 4. Stop, Start and Execute the Image
 
 Run the following commands to stop, start and run a specific image, based on the image name.
 
