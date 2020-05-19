@@ -1,16 +1,17 @@
 ## 1. main setup
 
-#### 1.1 get the latest ubuntu docker confs
+Get the latest ubuntu docker confs.
+
 ```bash
 $ docker pull ubuntu
 ```
 
-#### 1.2 run image
+Create an Ubuntu image.
 ```bash
 $ docker run -it --name <imagename> -p 8080:8080 ubuntu
 ```
 
-#### 1.3 setup environment
+Setup basics of the environment
 ```bash
 $ apt-get update
 $ apt-get install nano
@@ -38,17 +39,18 @@ $ pip install jupyter
 $ pip install jupyterlab
 ```
 
-start up local jupyter server
+Start up local jupyter server.
 
 ```bash
 $ jupyter lab --ip 0.0.0.0 --port 8080 --no-browser --allow-root
 ```
 
-you can now open jupyter in a browser via the prompted url
+You can now open jupyter in a browser via the prompted url.
 
 ## 3. clone git repo
 
-#### 3.1 install and configure git
+Install and configure git.
+
 ```bash
 $ apt install git
 $ su <username>
@@ -57,12 +59,13 @@ $ git config --global user.email "<your_git_email>"
 $ ssh-keygen -t rsa -b 4096 -C "<your_git_email>"
 ```
 
-#### 3.2 copy the output of the following commend and add ssh key in your github account
+Copy the output of the following commend and add ssh key in your Github account.
 ```bash
 $ cat ~/.ssh/id_rsa.pub
 ```
 
-#### 3.3 connect to git
+Connect to git
+
 ```bash
 $ eval "$(ssh-agent -s)"
 $ ssh-add ~/.ssh/id_rsa
@@ -70,7 +73,23 @@ $ git clone <repo url>
 ```
 
 ## 4. stop, restart and execute image
+
+Run the following commands to stop, start and run a specific image, based on the image name.
+
+To start up an image, run:
+
 ```bash
 $ docker start <imagename>
+```
+
+To execute on image, run:
+
+```bash
 $ docker exec -it <imagename> bash
+```
+
+To stop an image, run:
+
+```bash
+$ docker start <imagename>
 ```
