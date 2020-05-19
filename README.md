@@ -11,7 +11,8 @@ Create an Ubuntu image.
 $ docker run -it --name <imagename> -p 8080:8080 ubuntu
 ```
 
-Setup basics of the environment
+Setup basics of the environment.
+
 ```bash
 $ apt-get update
 $ apt-get install nano
@@ -22,7 +23,7 @@ $ pip3 install virtualenv
 
 ## 2. create a test project
 
-Make sure that you are in the docker!
+Make sure that you are still in the docker!
 
 Create a new user and switch to it. Create project direct and setup virtualenv.
 
@@ -64,7 +65,7 @@ Copy the output of the following commend and add ssh key in your Github account.
 $ cat ~/.ssh/id_rsa.pub
 ```
 
-Connect to git
+Connect to git.
 
 ```bash
 $ eval "$(ssh-agent -s)"
