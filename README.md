@@ -1,3 +1,5 @@
+# Step-by-step deployment of you own data science docker!
+
 ## 1. main setup
 
 Get the latest ubuntu docker confs.
@@ -25,12 +27,17 @@ $ pip3 install virtualenv
 
 Make sure that you are still in the docker!
 
-Create a new user and switch to it. Create project direct and setup virtualenv.
+Create a new user and switch to the created user.
 
 ```bash
 $ adduser <username>
 $ su <username>
 $ cd ~
+```
+
+Create a project directory and setup the virtual environment.
+
+```bash
 $ mkdir prx
 $ cd prx
 $ mkdir data notebooks
