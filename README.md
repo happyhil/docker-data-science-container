@@ -1,4 +1,4 @@
-# Step-by-step deployment of your own data science docker!
+# Step-by-step deployment of your own data science docker
 
 ## 1. Building the Ubuntu Docker
 
